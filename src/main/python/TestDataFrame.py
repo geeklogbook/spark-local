@@ -1,4 +1,5 @@
-#docker exec -it spark-master /opt/bitnami/spark/bin/spark-submit --master spark://spark-master:7077 /opt/spark-apps/testDataFrame.py
+#OUTSIDE THE CONTAINER -> docker exec -it spark-master /opt/bitnami/spark/bin/spark-submit --master spark://spark-master:7077 /opt/spark-apps/testDataFrame.py
+#INSIDE THE CONTAINER  -> spark-submit --master local /opt/spark-apps/testDataFrame.py
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.getOrCreate()
