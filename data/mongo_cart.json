@@ -1,0 +1,20 @@
+{"user_id": "u1", "cart": [{"item": "keyboard", "qty": 3}, {"item": "mouse", "qty": 2}]}
+{"user_id": "u2", "cart": [{"item": "mouse", "qty": 3}, {"item": "mouse", "qty": 1}, {"item": "keyboard", "qty": 1}]}
+{"user_id": "u3", "cart": [{"item": "headphones", "qty": 2}, {"item": "keyboard", "qty": 3}]}
+{"user_id": "u4", "cart": [{"item": "monitor", "qty": 3}]}
+{"user_id": "u5", "cart": [{"item": "mouse", "qty": 2}]}
+{"user_id": "u6", "cart": [{"item": "keyboard", "qty": 3}, {"item": "headphones", "qty": 1}, {"item": "mouse", "qty": 3}]}
+{"user_id": "u7", "cart": [{"item": "monitor", "qty": 1}, {"item": "monitor", "qty": 1}]}
+{"user_id": "u8", "cart": [{"item": "keyboard", "qty": 1}, {"item": "monitor", "qty": 1}]}
+{"user_id": "u9", "cart": [{"item": "monitor", "qty": 3}, {"item": "keyboard", "qty": 3}]}
+{"user_id": "u10", "cart": [{"item": "monitor", "qty": 3}]}
+{"user_id": "u11", "cart": [{"item": "monitor", "qty": 3}]}
+{"user_id": "u12", "cart": [{"item": "monitor", "qty": 2}, {"item": "monitor", "qty": 1}, {"item": "monitor", "qty": 3}]}
+{"user_id": "u13", "cart": [{"item": "monitor", "qty": 1}]}
+{"user_id": "u14", "cart": [{"item": "keyboard", "qty": 2}, {"item": "headphones", "qty": 1}]}
+{"user_id": "u15", "cart": [{"item": "headphones", "qty": 2}]}
+{"user_id": "u16", "cart": [{"item": "keyboard", "qty": 3}, {"item": "monitor", "qty": 1}, {"item": "keyboard", "qty": 3}]}
+{"user_id": "u17", "cart": [{"item": "monitor", "qty": 2}, {"item": "keyboard", "qty": 3}, {"item": "headphones", "qty": 3}]}
+{"user_id": "u18", "cart": [{"item": "keyboard", "qty": 3}, {"item": "headphones", "qty": 2}]}
+{"user_id": "u19", "cart": [{"item": "mouse", "qty": 1}, {"item": "headphones", "qty": 1}, {"item": "keyboard", "qty": 3}]}
+{"user_id": "u20", "cart": [{"item": "keyboard", "qty": 1}]}
