@@ -1,0 +1,20 @@
+{"region": "EU", "ticket_id": "t0001", "estado": "en progreso"}
+{"region": "LATAM", "ticket_id": "t0002", "estado": "cerrado"}
+{"region": "LATAM", "ticket_id": "t0003", "estado": "cerrado"}
+{"region": "ASIA", "ticket_id": "t0004", "estado": "en progreso"}
+{"region": "ASIA", "ticket_id": "t0005", "estado": "en progreso"}
+{"region": "ASIA", "ticket_id": "t0006", "estado": "cerrado"}
+{"region": "ASIA", "ticket_id": "t0007", "estado": "abierto"}
+{"region": "US", "ticket_id": "t0008", "estado": "abierto"}
+{"region": "LATAM", "ticket_id": "t0009", "estado": "en progreso"}
+{"region": "LATAM", "ticket_id": "t0010", "estado": "abierto"}
+{"region": "EU", "ticket_id": "t0011", "estado": "en progreso"}
+{"region": "ASIA", "ticket_id": "t0012", "estado": "abierto"}
+{"region": "ASIA", "ticket_id": "t0013", "estado": "cerrado"}
+{"region": "LATAM", "ticket_id": "t0014", "estado": "en progreso"}
+{"region": "LATAM", "ticket_id": "t0015", "estado": "cerrado"}
+{"region": "US", "ticket_id": "t0016", "estado": "abierto"}
+{"region": "ASIA", "ticket_id": "t0017", "estado": "abierto"}
+{"region": "EU", "ticket_id": "t0018", "estado": "abierto"}
+{"region": "US", "ticket_id": "t0019", "estado": "cerrado"}
+{"region": "ASIA", "ticket_id": "t0020", "estado": "en progreso"}
