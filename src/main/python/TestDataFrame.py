@@ -1,5 +1,5 @@
-#OUTSIDE THE CONTAINER -> docker exec -it spark-master /opt/bitnami/spark/bin/spark-submit --master spark://spark-master:7077 /opt/spark-apps/testDataFrame.py
-#INSIDE THE CONTAINER  -> /opt/bitnami/spark/bin/spark-submit --master spark://spark-master:7077 /opt/spark-apps/testDataFrame.py
+#OUTSIDE -> docker exec -it spark-master /opt/spark/bin/spark-submit --master spark://spark-master:7077 /opt/spark-apps/main/python/TestDataFrame.py
+#FROM JUPYTER -> /opt/spark/bin/spark-submit --master spark://spark-master:7077 /workspace/src/main/python/TestDataFrame.py
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.getOrCreate()

@@ -1,62 +1,58 @@
 services:
   spark-master:
-    image: bitnami/spark:3.3.2-debian-11-r10
+    image: apache/spark:4.0.2-scala2.13-java17-python3-r-ubuntu
     container_name: spark-master
     environment:
-      - SPARK_MODE=master
-      - SPARK_MASTER_HOST=spark-master
+      - SPARK_NO_DAEMONIZE=true
+    command: ["/opt/spark/sbin/start-master.sh", "-h", "spark-master", "-p", "7077"]
     ports:
       - "7077:7077"
       - "8080:8080"
     volumes:
-      - ./src/main/python:/opt/spark-apps
+      - ./src:/opt/spark-apps
     networks:
       - spark-network
 
   spark-worker-1:
-    image: bitnami/spark:3.3.2-debian-11-r10
+    image: apache/spark:4.0.2-scala2.13-java17-python3-r-ubuntu
     container_name: spark-worker-1
     environment:
-      - SPARK_MODE=worker
-      - SPARK_MASTER_URL=spark://spark-master:7077
-      - SPARK_WORKER_MEMORY=1G
-      - SPARK_WORKER_CORES=2
+      - SPARK_NO_DAEMONIZE=true
     depends_on:
       - spark-master
+    command: ["/opt/spark/sbin/start-worker.sh", "spark://spark-master:7077", "--webui-port", "8081"]
+    ports:
+      - "8081:8081"
     networks:
       - spark-network
 
   spark-worker-2:
-    image: bitnami/spark:3.3.2-debian-11-r10
+    image: apache/spark:4.0.2-scala2.13-java17-python3-r-ubuntu
     container_name: spark-worker-2
     environment:
-      - SPARK_MODE=worker
-      - SPARK_MASTER_URL=spark://spark-master:7077
-      - SPARK_WORKER_MEMORY=1G
-      - SPARK_WORKER_CORES=2
+      - SPARK_NO_DAEMONIZE=true
     depends_on:
       - spark-master
+    command: ["/opt/spark/sbin/start-worker.sh", "spark://spark-master:7077", "--webui-port", "8082"]
+    ports:
+      - "8082:8082"
     networks:
       - spark-network
 
   jupyter:
-    build: .
-    image: spark-jupyter:3.3.2
+    build: ./jupyter
     container_name: jupyter
     ports:
       - "8888:8888"
     environment:
-      - PYSPARK_SUBMIT_ARGS=--master spark://spark-master:7077 pyspark-shell
-      - PYTHONPATH=/opt/bitnami/spark/python:/opt/bitnami/spark/python/lib/py4j-0.10.9.5-src.zip:$PYTHONPATH
+      - SPARK_MASTER=spark://spark-master:7077
     volumes:
-      - ./notebooks:/home/jovyan/notebooks
-      - ./src/main/python:/opt/spark-apps
+      - ./notebooks:/workspace/notebooks
+      - ./src:/workspace/src
     depends_on:
       - spark-master
     networks:
       - spark-network
-    command: >
-      bash -c "jupyter notebook --ip=0.0.0.0 --no-browser --NotebookApp.token='' --allow-root --notebook-dir=/home/jovyan/notebooks"
 
 networks:
   spark-network:
